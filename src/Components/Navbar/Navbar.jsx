@@ -1,21 +1,23 @@
-
+import "./style.css"
+import sun from "./../../img/icons/sun.svg"
+import moon from "./../../img/icons/moon.svg"
 
 const Navbar = () => {
     return (
-        <nav class="nav">
-            <div class="container">
-                <div class="nav-row">
-                    <a href="./index.html" class="logo"><strong>Freelancer</strong> portfolio</a>
+        <nav className="nav">
+            <div className="container">
+                <div className="nav-row">
+                    <a href="./index.html" className="logo"><strong>Freelancer</strong> portfolio</a>
 
-                    <button class="dark-mode-btn">
-                        <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon" />
-                        <img src="./img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon" />
+                    <button className="dark-mode-btn">
+                        <img src={sun} alt="Light mode" className="dark-mode-btn__icon"/>
+                        <img src={moon} alt="Dark mode" className="dark-mode-btn__icon"/>
                     </button>
 
-                    <ul class="nav-list">
-                        <li class="nav-list__item"><a href="./index.html" class="nav-list__link nav-list__link--active">Home</a></li>
-                        <li class="nav-list__item"><a href="./projects.html" class="nav-list__link">Projects</a></li>
-                        <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
+                    <ul className="nav-list">
+                        <li className="nav-list__item"><a href="./index.html" className="nav-list__link nav-list__link--active">Home</a></li>
+                        <li className="nav-list__item"><a href="./projects.html" className="nav-list__link">Projects</a></li>
+                        <li className="nav-list__item"><a href="./contacts.html" className="nav-list__link">Contacts</a></li>
                     </ul>
                 </div>
             </div>
