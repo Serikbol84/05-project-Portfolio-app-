@@ -1,12 +1,10 @@
-import BtnGitHub from "../Components/btnGitHub/BtnGitHub";
-
-
 import { useParams } from "react-router-dom";
-
+import BtnGitHub from "../Components/btnGitHub/BtnGitHub";
 import { projects } from "./../helpers/projectsList";
 
+
 const Project = () => {
-    const {id} = useParams;
+    const {id} = useParams();
     const project = projects[id];
 
     return (
