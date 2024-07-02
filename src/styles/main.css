@@ -1,5 +1,6 @@
 @import './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 :root {
     /* Colors */
@@ -53,7 +54,7 @@
 
 html,
 body {
-    
+    width: 100%;
     min-height: 100vh;
 
     font-family: 'DM Sans', sans-serif;
@@ -62,7 +63,10 @@ body {
     /* Light mode */
     background-color: var(--page-bg);
     color: var(--text-color);
+
 }
+
+
 
 #root {
     min-height: 100vh;
@@ -72,6 +76,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
 }
 
 /* General */
@@ -87,6 +92,7 @@ body {
 }
 
 .section {
+    /* scroll-behavior: smooth; */
     padding: 70px 0;
 }
 
@@ -214,6 +220,7 @@ body {
     text-align: center;
 }
 
+
 .content-list a {
     color: var(--accent);
 }
@@ -224,10 +231,12 @@ body {
 }
 
 .content-list__item1 {
-    max-width: 500px;
+    width: 600px;
+    /* height: 396px; */
     font-size: 18px;
     line-height: 1.5;
     /* position: relative; */
+    /* opacity: 0; */
 }
 
 .content-list__item1 p + p {
@@ -237,6 +246,5 @@ body {
 .content-list__item p + p {
     margin-top: 0.5em;
 }
-
 
 

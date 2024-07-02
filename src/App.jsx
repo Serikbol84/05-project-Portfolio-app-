@@ -1,4 +1,5 @@
-import "./styles/main.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./utils/scrollToTop";
 
 import Navbar from "./Components/navbar/Navbar";
 import Footer from "./Components/footer/Footer";
@@ -7,8 +8,7 @@ import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import Project from "./pages/Project";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./utils/scrollToTop";
+import "./styles/main.css"
 
 
 

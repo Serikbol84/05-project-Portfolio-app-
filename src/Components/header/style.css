@@ -3,7 +3,7 @@
 .header {
 	padding: 40px 0;
 	min-height: 695px;
-
+	/* height: 500px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -1,26 +1,39 @@
 import Header from "../Components/header/Header";
-import { useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import './../styles/main.css'
 
 
 const Home = () => {
-
+    gsap.registerPlugin(ScrollTrigger);
 
     useLayoutEffect(() => {
-        
-        gsap.from(".content-list__item1", {
-            // opacity: 1,
-            x: -500, 
-            duration: 2,
-            
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger:".content-list__item1",
+                start: "-19% 70%",
+                end: "40% 40%",
+                scrub: true,
+                // markers: true,
+                
+            },
         })
+        gsap.set(".content-list__item1", { x: -1100});
+        tl.to(".content-list__item1", {
+            // opacity: 1,
+            x: 0, 
+            // rotate: 360,
+            // delay: 2,
+        });
     }, [])
+    
     return (
         <>
             <Header />
             <main className="section">
                 {/* <div className="container1"> */}
-
+                    
                     <div className="content-list">
                         <div className="content-list__item1">
                             <h2 className="title-2">Frontend</h2>
