@@ -1,28 +1,44 @@
 import Header from "../Components/header/Header";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+
 
 const Home = () => {
+
+
+    useLayoutEffect(() => {
+        
+        gsap.from(".content-list__item1", {
+            // opacity: 1,
+            x: -500, 
+            duration: 2,
+            
+        })
+    }, [])
     return (
         <>
             <Header />
             <main className="section">
-                <div className="container">
+                {/* <div className="container1"> */}
 
-                    <ul className="content-list">
-                        <li className="content-list__item">
+                    <div className="content-list">
+                        <div className="content-list__item1">
                             <h2 className="title-2">Frontend</h2>
                             <p>
-                                JavaScript, TypeScript, ReactJS, Angular, Redux, HTML, CSS, NPM, 
-                                BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
+                                I am a front-end developer with experience in creating modern and efficient web applications. 
+                                My core specialization includes web page layout, working with JavaScript, and using the React library 
+                                to develop dynamic user interfaces. <br />
+                                <br />
+
+                                Web Page Layout: Creating responsive and cross-browser layouts using HTML, CSS, and modern CSS frameworks.
+                                JavaScript: Developing interactive elements and functionalities, working with asynchronous code, APIs, and other modern features of the language.
+                                React: Building component-based architectures, managing application state with Redux or Context API, and creating performant and scalable applications.
                             </p>
-                        </li>
+                        </div>
 
-                        <li className="content-list__item">
-                            <h2 className="title-2">Backend</h2>
-                            <p>NodeJS, MySQL, MongoDB, PHP, Laravel</p>
-                        </li>
-                    </ul>
+                    </div>
 
-                </div>
+                {/* </div> */}
             </main>
         </>
         

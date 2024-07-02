@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import BtnGitHub from "../Components/btnGitHub/BtnGitHub";
 import { projects } from "./../helpers/projectsList";
+import BtnBack from "../Components/btnBack/BtnBack";
+import { Link } from "react-router-dom";
 
 
 const Project = () => {
@@ -9,6 +11,10 @@ const Project = () => {
 
     return (
         <main className="section">
+            <Link to='/projects'>
+                <BtnBack />
+            </Link>
+            
             <div className="container">
                 <div className="project-details">
 
