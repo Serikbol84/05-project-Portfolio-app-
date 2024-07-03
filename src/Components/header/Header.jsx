@@ -1,10 +1,19 @@
+
 import "./style.css"
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
     return (
         <header className="header">
             <div className="header__wrapper">
-                <h1 className="header__title">
+                <h1 className={`header__title ${isVisible ? 'enter' : ''}`}>
                     <strong>
                         Hi, my name is <em>Serikbol</em>
                     </strong> 

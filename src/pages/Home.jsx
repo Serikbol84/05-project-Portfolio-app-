@@ -3,6 +3,8 @@ import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './../styles/main.css'
+import video from './../public/01.mp4'
+
 
 
 const Home = () => {
@@ -19,22 +21,25 @@ const Home = () => {
                 
             },
         })
-        gsap.set(".content-list__item1", { x: -1100});
-        tl.to(".content-list__item1", {
-            // opacity: 1,
-            x: 0, 
-            // rotate: 360,
-            // delay: 2,
-        });
+        gsap.set(".content-list__item1", { x: -1100 });
+        tl.to(".content-list__item1", 
+            { x: 0 }
+        )
+        .fromTo(
+            ".square",
+            {x: 700},
+            {x: 0}
+        )
+
     }, [])
     
     return (
         <>
             <Header />
             <main className="section">
-                {/* <div className="container1"> */}
+                {/* <div className="container"> */}
                     
-                    <div className="content-list">
+                    <div className="content-list_home">
                         <div className="content-list__item1">
                             <h2 className="title-2">Frontend</h2>
                             <p>
@@ -49,7 +54,15 @@ const Home = () => {
                             </p>
                         </div>
 
+                        <div className="square">
+                            <video width="470" controls >
+                                <source src={video} type="video/mp4" />
+                            </video>
+                        </div>
+                        
+
                     </div>
+                    
 
                 {/* </div> */}
             </main>
