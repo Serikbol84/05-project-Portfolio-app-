@@ -3,7 +3,9 @@ import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './../styles/main.css'
-import video from './../public/01.mp4'
+// import Me from "./../img/Me.jpg"
+
+
 
 
 
@@ -26,9 +28,9 @@ const Home = () => {
             { x: 0 }
         )
         .fromTo(
-            ".square",
-            {x: 700},
-            {x: 0}
+            ".me",
+            { x: 700},
+            { x: 0}
         )
 
     }, [])
@@ -40,6 +42,7 @@ const Home = () => {
                 {/* <div className="container"> */}
                     
                     <div className="content-list_home">
+                        
                         <div className="content-list__item1">
                             <h2 className="title-2">Frontend</h2>
                             <p>
@@ -54,11 +57,10 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <div className="square">
-                            <video width="470" controls >
-                                <source src={video} type="video/mp4" />
-                            </video>
+                        <div className="me">
+                            {/* <img src={Me} alt="" className="pic"/> */}
                         </div>
+                        
                         
 
                     </div>
