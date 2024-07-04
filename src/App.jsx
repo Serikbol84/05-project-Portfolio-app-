@@ -10,16 +10,11 @@ import Project from "./pages/Project";
 
 import "./styles/main.css"
 
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 
 
 function App() {
-
-    const lenis = useLenis(({ scroll }) => {
-        // called every scroll
-        console.log('Scrolled:', scroll.y);
-    });
 
     return (
         <div className="App">
@@ -28,12 +23,12 @@ function App() {
                 <Navbar />
 
                 <ReactLenis root>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/project/:id" element={<Project />} />
-                    <Route path="/contacts" element={<Contacts />} />
-                </Routes>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/project/:id" element={<Project />} />
+                        <Route path="/contacts" element={<Contacts />} />
+                    </Routes>
                 </ReactLenis>
 
                 <Footer />

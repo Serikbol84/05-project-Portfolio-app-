@@ -69,8 +69,6 @@ body {
 
 }
 
-
-
 #root {
     min-height: 100vh;
 }
@@ -179,7 +177,13 @@ body {
     row-gap: 30px;
 }
 
+.project {
+    transition: transform 0.3s ease;
+}
 
+.project:hover {
+    transform: scale(1.08);
+}
 
 /* Project details */
 
