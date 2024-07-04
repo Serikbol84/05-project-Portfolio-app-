@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.2s ease-in;
+    /* transition: opacity 0.2s ease-in; */
     cursor: pointer;
     
 }
@@ -22,15 +22,15 @@
     border-top: 2px solid var(--arrow-color);
     border-left: 2px solid var(--arrow-color);
     transform: rotate(-45deg);
-    transition: border-color 0.3s ease;
+    /* transition: border-color 0.3s ease; */
 }
 
-.btn-back:hover {
+/* .btn-back:hover {
     opacity: 0.6;
-}
+} */
 
-.btn-back:active {
+/* .btn-back:active {
     transform: translateY(2px);
-}
+} */
 
 

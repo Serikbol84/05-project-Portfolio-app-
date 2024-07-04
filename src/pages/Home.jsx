@@ -3,15 +3,15 @@ import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './../styles/main.css'
-// import Me from "./../img/Me.jpg"
-
+import Me from "./../img/Me.jpg"
+// import { motion } from "framer-motion"
 
 
 
 
 const Home = () => {
     gsap.registerPlugin(ScrollTrigger);
-
+    
     useLayoutEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -44,7 +44,7 @@ const Home = () => {
                     <div className="content-list_home">
                         
                         <div className="content-list__item1">
-                            <h2 className="title-2">Frontend</h2>
+                            <h2 className="title-2">About Me</h2>
                             <p>
                                 I am a front-end developer with experience in creating modern and efficient web applications. 
                                 My core specialization includes web page layout, working with JavaScript, and using the React library 
@@ -57,12 +57,14 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <div className="me">
-                            {/* <img src={Me} alt="" className="pic"/> */}
-                        </div>
-                        
-                        
-
+                        {/* <motion.img src={Me} alt="Me" className="me"
+                            whileHover={{ scale: 1.3 }}
+                            whileTap={{ scale: 0.9 }} // Ради интереса применил анимацию из Framer.com
+                        /> */}
+                        <img src={Me} alt="Me" className="me" 
+                            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.3)'}
+                            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        /> 
                     </div>
                     
 
