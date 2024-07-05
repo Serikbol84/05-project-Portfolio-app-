@@ -10,9 +10,6 @@
     --white: #fff;
     --purple: #5c62ec;
 
-    /* Arrow Color */
-    --arrow-color: #000;
-
     /* Nav */
     --nav-bg: var(--black);
     --nav-border: var(--black-border);
@@ -36,7 +33,10 @@
     --project-card-text: var(--black);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 
-    
+    /* Arrow Color */
+    --arrow-color: #000;
+
+    --skills-bg: #fff;
 }
 
 .dark {
@@ -52,6 +52,8 @@
 
     /* Arrow Color */
     --arrow-color: #fff;
+
+    --skills-bg: #252526;
    
 }
 
@@ -71,6 +73,7 @@ body {
 
 #root {
     min-height: 100vh;
+
 }
 
 .App {
@@ -78,6 +81,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    
 }
 
 /* General */
@@ -275,4 +279,55 @@ body {
     /* text-align: center; */
 }
 
+.skills_wrapper{
+    margin: 0 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* padding-left: 60px; */
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
 
+.skills__title {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    
+}
+
+.skills__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+.skills__info-item {
+    margin-bottom: 50px;
+    max-width: 630px;
+    display: flex;
+    
+    background: var(--skills-bg);
+    /* box-shadow: var(--box-shadow); */
+}
+
+.skills__info-item h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+.skills__info-img {
+   padding: 15px;
+   min-width: 100px;
+   max-width: 130px;
+}
+
+.skills_info-itex_text {
+    padding: 15px;
+}

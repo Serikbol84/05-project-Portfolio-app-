@@ -12,9 +12,9 @@ const ScrollTriggerHome = ({ item1Ref, meRef }) => {
             scrollTrigger: {
                 trigger: item1Ref.current,
                 start: "-19% 70%",
-                end: "40% 40%",
+                end: "35% 40%",
                 scrub: true,
-                // markers: true,
+                markers: true,
             },
         })
         gsap.set(item1Ref.current, { x: -1100 });
