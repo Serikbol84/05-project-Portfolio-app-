@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./utils/scrollToTop";
 import { ReactLenis } from '@studio-freight/react-lenis';
 
-import Navbar from "./Components/navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/footer/Footer";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
